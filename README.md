@@ -31,7 +31,7 @@ Not tested:
 
 3. You'll be prompted to select the script that you want to create a payload-free package from.
 
-4. Once you've selected the script, you'll be prompted to name the payload-free package. By default, the name filled in will be **Payload Free Installer Package**, but this name can be changed as desired.
+4. Once you've selected the script, you'll be prompted to name the payload-free package. By default, the name filled in will be **Payload-Free Installer Package**, but this name can be changed as desired.
 
 5. Once you've entered a name for the installer package, you'll be prompted for a package identifier. By default, the name filled in will be **com.github.payload_free**, but this name should be changed to be something unique.
 
@@ -58,7 +58,7 @@ Not tested:
 
 4. Next, a **scripts** directory is created inside of **/tmp/package_name_here**
 
-5. The **postinstall** script is copied to **/tmp/package_name_here/scripts**
+5. The **postinstall** script is moved to **/tmp/package_name_here/scripts**
 
 6. The payload-free package is built by pkgbuild using the postinstall script stored in **/tmp/package_name_here/scripts**
 
