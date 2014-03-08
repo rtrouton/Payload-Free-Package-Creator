@@ -1,6 +1,28 @@
 Payload-Free-Package-Creator
 ============================
 
+**OS Compatibility:**
+
+**Payload-Free Package Creator.app** has been tested and verified to run on the following versions of OS X:
+
+**10.7.x**
+
+**10.8.x**
+
+**10.9.x**
+
+
+**Payload-Free Package Creator.app** has been tested and verified that it does not run on the following version of OS X:
+
+**10.6.x**
+
+
+Not tested:
+
+**10.5.x or earlier**
+
+
+
 ***Using Payload-Free Package Creator.app***
 
 1. As needed, download the **Payload-Free_Package_Creator_Application.zip** file from the **application** directory in this GitHub repo.
