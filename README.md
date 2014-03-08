@@ -41,14 +41,14 @@ Not tested:
 
 8. Click OK at the prompt and a new Finder window will open and display the newly-created payload-free package.
 
-9. Payload-Free Package Creator.app will automatically exit.
+9. **Payload-Free Package Creator.app** will automatically exit.
 
 
 
 ***How Payload-Free Package Creator.app works***
 
 
-Payload-Free Package Creator.app is an Automator application that uses AppleScript, shell scripting and pkgbuild behind the scenes to create payload-free packages. When a script is selected, the following process takes place:
+**Payload-Free Package Creator.app** is an Automator application that uses AppleScript, shell scripting and pkgbuild behind the scenes to create payload-free packages. When a script is selected, the following process takes place:
 
 1. The script is copied to **/tmp** and renamed to **postinstall**, to match the name that pkgbuild is expecting for a post-installation script.
 
