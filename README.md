@@ -11,6 +11,8 @@ Payload-Free-Package-Creator
 
 **10.9.x**
 
+**10.10.x**
+
 
 **Payload-Free Package Creator.app** has been tested and verified that it does not run on the following version of OS X:
 
