@@ -19,6 +19,16 @@ on run {input, parameters}
 		end if
 	end repeat
 	
+	-- this repeat loop prevents empty strings from being submitted for the version identifier value
+	set q to 0
+	repeat while q is 0
+		set result to text returned of (display dialog "Enter a Version Identifier:" default answer "1.0")
+		if result is not "" then
+			set pkgvers to result
+			set q to 1
+		end if
+	end repeat
+	
 	-- Set the postinstall script to be executable
 	
 	do shell script "chmod a+x /tmp/postinstall" with administrator privileges
@@ -31,6 +41,7 @@ on run {input, parameters}
 	
 	do shell script "mkdir /tmp/" & quoted form of pkgname & "" with administrator privileges
 	do shell script "mkdir /tmp/" & quoted form of pkgname & "/scripts" with administrator privileges
+	do shell script "mkdir /tmp/" & quoted form of pkgname & "/nopayload" with administrator privileges
 	
 	-- Move the postinstall script into the correct build directory
 	
@@ -38,7 +49,7 @@ on run {input, parameters}
 	
 	-- Build the payload-free package
 	
-	do shell script "pkgbuild --identifier " & quoted form of pkgid & " --nopayload --scripts /tmp/" & quoted form of pkgname & "/scripts /tmp/" & quoted form of pkgname & "/" & quoted form of pkgname & ".pkg" with administrator privileges
+	do shell script "pkgbuild --identifier " & quoted form of pkgid & " --version " & quoted form of pkgvers & " --root /tmp/" & quoted form of pkgname & "/nopayload --scripts /tmp/" & quoted form of pkgname & "/scripts /tmp/" & quoted form of pkgname & "/" & quoted form of pkgname & ".pkg" with administrator privileges
 	
 	-- Display dialog that the payload-free package has been created
 	

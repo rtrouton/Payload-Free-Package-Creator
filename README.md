@@ -5,7 +5,6 @@ Payload-Free-Package-Creator
 
 **Payload-Free Package Creator.app** has been tested and verified to run on the following versions of OS X:
 
-**10.7.x**
 
 **10.8.x**
 
@@ -16,12 +15,13 @@ Payload-Free-Package-Creator
 
 **Payload-Free Package Creator.app** has been tested and verified that it does not run on the following version of OS X:
 
-**10.6.x**
+**10.7.x**
+
 
 
 Not tested:
 
-**10.5.x or earlier**
+**10.6.x or earlier**
 
 ============================
 
@@ -37,13 +37,15 @@ Not tested:
 
 5. Once you've entered a name for the installer package, you'll be prompted for a package identifier. By default, the name filled in will be **com.github.payload_free**, but this name should be changed to be something unique.
 
-6. Once the package name and package identifier have been set, **Payload-Free Package Creator.app** will prompt for an administrator's username and password.
+6. Once you’ve entered an identifier for the installer package, you’ll be prompted for a version number. By default, the value filled in will be **1.0**, but this value should be changed to be something unique. 
 
-7. Once the admin username and password are provided, **Payload-Free Package Creator.app** will create the payload-free package and prompt you when it's finished.
+7. Once the package name, package identifier and package version number have been set, **Payload-Free Package Creator.app** will prompt for an administrator's username and password.
 
-8. Click OK at the prompt and a new Finder window will open and display the newly-created payload-free package.
+8. Once the admin username and password are provided, **Payload-Free Package Creator.app** will create the payload-free package and prompt you when it's finished.
 
-9. **Payload-Free Package Creator.app** will automatically exit.
+9. Click OK at the prompt and a new Finder window will open and display the newly-created payload-free package.
+
+10. **Payload-Free Package Creator.app** will automatically exit.
 
 
 
@@ -58,7 +60,7 @@ Not tested:
 
 3. A new directory is created in **/tmp** that matches the chosen name of the package.
 
-4. Next, a **scripts** directory is created inside of **/tmp/package_name_here**
+4. Next, a **scripts** directory and an empty directory named **nopayload** are created inside of **/tmp/package_name_here**. The **nopayload** directory provides the empty directory for **pkgbuild**'s **--root** option
 
 5. The **postinstall** script is moved to **/tmp/package_name_here/scripts**
 
@@ -69,4 +71,4 @@ Not tested:
 8. Once the user is notified and clicks OK, a new Finder window opens for **/tmp/package_name_here**
 
 
-Blog post: [http://derflounder.wordpress.com/2014/03/08/payload-free-package-creator-app/](http://derflounder.wordpress.com/2014/03/08/payload-free-package-creator-app/)
+Blog posts: [https://derflounder.wordpress.com/category/payload-free-package-creator/](https://derflounder.wordpress.com/category/payload-free-package-creator/)
