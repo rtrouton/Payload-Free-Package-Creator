@@ -1,0 +1,3 @@
+Name: Payload-Free Package Creator
+ID: com.github.payload-free_package_creator
+Version: 2.2
