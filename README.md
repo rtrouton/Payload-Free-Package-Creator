@@ -3,6 +3,11 @@ Payload-Free-Package-Creator
 
 **OS Compatibility:**
 
+**Payload-Free Package Creator.app** has been tested and verified to run on the following versions of macOS:
+
+**10.12.0**
+
+
 **Payload-Free Package Creator.app** has been tested and verified to run on the following versions of OS X:
 
 **10.9.x**
