@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>417</string>
+	<string>512</string>
 	<key>AMApplicationVersion</key>
-	<string>2.6</string>
+	<string>2.10</string>
 	<key>AMDocumentVersion</key>
 	<string>2</string>
 	<key>actions</key>
@@ -105,7 +105,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>521.500000:248.000000</string>
+				<string>561.000000:247.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -153,7 +153,7 @@ end run</string>
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>on run {input, parameters}		-- To fix an issue with Automator's "Ask for Finder Items" not displaying the	-- text in the "Prompt:" section on OS X 10.11.x, this AppleScript dialog window	-- is being added to inform the user of what to do when the selection window appears.		display dialog "In the next window, select the script to use when creating your payload-free package." buttons {"OK"} default button 1 with icon "AutomatorApplet.icns"		return inputend run</string>
+					<string>on run {input, parameters}		-- To fix an issue with Automator's "Ask for Finder Items" not displaying the	-- text in the "Prompt:" section on OS X 10.11.x, this AppleScript dialog window	-- is being added to inform the user of what to do when the selection window appears.		display dialog "In the next window, select the script to use when creating your payload-free package." buttons {"OK"} default button 1 with icon "ApplicationStub.icns"		return inputend run</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -207,7 +207,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>521.500000:494.000000</string>
+				<string>561.000000:492.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -316,9 +316,9 @@ end run</string>
 					<key>0</key>
 					<dict>
 						<key>default value</key>
-						<false/>
+						<integer>0</integer>
 						<key>name</key>
-						<string>multipleSelection</string>
+						<string>granularity</string>
 						<key>required</key>
 						<string>0</string>
 						<key>type</key>
@@ -329,9 +329,9 @@ end run</string>
 					<key>1</key>
 					<dict>
 						<key>default value</key>
-						<integer>0</integer>
+						<false/>
 						<key>name</key>
-						<string>granularity</string>
+						<string>multipleSelection</string>
 						<key>required</key>
 						<string>0</string>
 						<key>type</key>
@@ -369,7 +369,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>521.500000:650.000000</string>
+				<string>561.000000:643.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Ask for Finder Items.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -491,7 +491,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>521.500000:753.000000</string>
+				<string>561.000000:743.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Copy Finder Items.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -965,7 +965,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>521.500000:913.000000</string>
+				<string>561.000000:900.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Rename Finder Items.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -1067,7 +1067,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>521.500000:1159.000000</string>
+				<string>561.000000:1145.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -1077,40 +1077,40 @@ end run</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>52F504AE-B76D-41AD-83C4-5365367F9E9C</key>
-		<dict>
-			<key>from</key>
-			<string>715584CE-E634-4C48-98DB-6E830B526A12 - 715584CE-E634-4C48-98DB-6E830B526A12</string>
-			<key>to</key>
-			<string>E947A45D-3891-4BF0-AE8A-8A323EAA89ED - E947A45D-3891-4BF0-AE8A-8A323EAA89ED</string>
-		</dict>
-		<key>7DA54C82-943B-4862-A3F9-0F30CC28FBC9</key>
-		<dict>
-			<key>from</key>
-			<string>39307CB1-194C-4568-AA64-CF3F89AD886D - 39307CB1-194C-4568-AA64-CF3F89AD886D</string>
-			<key>to</key>
-			<string>715584CE-E634-4C48-98DB-6E830B526A12 - 715584CE-E634-4C48-98DB-6E830B526A12</string>
-		</dict>
-		<key>9D8B2343-6C57-43EE-B324-96419D726654</key>
+		<key>2DA28372-B1A5-44CC-97F8-862B8E11CCED</key>
 		<dict>
 			<key>from</key>
 			<string>BE30C015-52AF-45A1-9B17-BE44451A189E - BE30C015-52AF-45A1-9B17-BE44451A189E</string>
 			<key>to</key>
 			<string>39307CB1-194C-4568-AA64-CF3F89AD886D - 39307CB1-194C-4568-AA64-CF3F89AD886D</string>
 		</dict>
-		<key>C1829176-B0EF-467F-A6A6-3745C32CC708</key>
+		<key>4F72FC2E-D402-4AFB-B64E-667C3921B05F</key>
+		<dict>
+			<key>from</key>
+			<string>715584CE-E634-4C48-98DB-6E830B526A12 - 715584CE-E634-4C48-98DB-6E830B526A12</string>
+			<key>to</key>
+			<string>E947A45D-3891-4BF0-AE8A-8A323EAA89ED - E947A45D-3891-4BF0-AE8A-8A323EAA89ED</string>
+		</dict>
+		<key>67A392F8-5FE9-497A-B19D-AF70DC4A4C62</key>
 		<dict>
 			<key>from</key>
 			<string>C104F5DA-732F-4D58-94B4-6957D0165299 - C104F5DA-732F-4D58-94B4-6957D0165299</string>
 			<key>to</key>
 			<string>71B51407-6411-405C-8FC2-40EFB023A0CE - 71B51407-6411-405C-8FC2-40EFB023A0CE</string>
 		</dict>
-		<key>E757223A-0F38-4092-AE24-4C3752FACD81</key>
+		<key>AC5ED9B9-1EDC-4081-B77D-512158C9DB98</key>
 		<dict>
 			<key>from</key>
 			<string>E947A45D-3891-4BF0-AE8A-8A323EAA89ED - E947A45D-3891-4BF0-AE8A-8A323EAA89ED</string>
 			<key>to</key>
 			<string>C104F5DA-732F-4D58-94B4-6957D0165299 - C104F5DA-732F-4D58-94B4-6957D0165299</string>
+		</dict>
+		<key>F0D22289-F3E3-4F13-930A-DC86C7463FEB</key>
+		<dict>
+			<key>from</key>
+			<string>39307CB1-194C-4568-AA64-CF3F89AD886D - 39307CB1-194C-4568-AA64-CF3F89AD886D</string>
+			<key>to</key>
+			<string>715584CE-E634-4C48-98DB-6E830B526A12 - 715584CE-E634-4C48-98DB-6E830B526A12</string>
 		</dict>
 	</dict>
 	<key>variables</key>
