@@ -5,13 +5,7 @@ Payload-Free-Package-Creator
 
 The current release of **Payload-Free Package Creator.app** has been tested and verified to run on the following versions of macOS:
 
-* 12.3.1
-* 11.6.5
-* 10.15.7
-
-Not tested on the following versions of macOS:
-
-* 10.14.6 or earlier
+* 15.5.0
 
 ============================
 

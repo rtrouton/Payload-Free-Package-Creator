@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>512</string>
+	<string>528</string>
 	<key>AMApplicationVersion</key>
 	<string>2.10</string>
 	<key>AMDocumentVersion</key>
@@ -105,7 +105,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>561.000000:247.000000</string>
+				<string>1521.500000:247.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -207,7 +207,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>561.000000:492.000000</string>
+				<string>1521.500000:492.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -369,7 +369,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>561.000000:643.000000</string>
+				<string>1521.500000:643.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Ask for Finder Items.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -491,7 +491,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>561.000000:743.000000</string>
+				<string>1521.500000:743.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Copy Finder Items.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -965,7 +965,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>561.000000:900.000000</string>
+				<string>1521.500000:900.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Rename Finder Items.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -1013,7 +1013,7 @@ end run</string>
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>on run {input, parameters}		-- this repeat loop prevents empty strings from being submitted for the package name value	set q to 0	repeat while q is 0		set result to text returned of (display dialog "Enter a Name For Your Payload-Free Installer Package:" default answer "Payload-Free Installer Package")		if result is not "" then			set pkgname to result			set q to 1		end if	end repeat	-- this repeat loop prevents empty strings from being submitted for the package identifier value	set q to 0	repeat while q is 0		set result to text returned of (display dialog "Enter a Package Identifier:" default answer "com.github.payload_free")		if result is not "" then			set pkgid to result			set q to 1		end if	end repeat		-- this repeat loop prevents empty strings from being submitted for the version identifier value	set q to 0	repeat while q is 0		set result to text returned of (display dialog "Enter a Version Identifier:" default answer "1.0")		if result is not "" then			set pkgvers to result			set q to 1		end if	end repeat		-- Set the postinstall script to be executable		do shell script "chmod a+x /tmp/postinstall" with administrator privileges		-- Remove any existing build directories that have the same name as the new payload-free package		do shell script "rm -rf /tmp/" &amp; quoted form of pkgname &amp; "/" with administrator privileges		-- Create the build directories for the payload-free package		do shell script "mkdir /tmp/" &amp; quoted form of pkgname &amp; "" with administrator privileges	do shell script "mkdir /tmp/" &amp; quoted form of pkgname &amp; "/scripts" with administrator privileges	do shell script "mkdir /tmp/" &amp; quoted form of pkgname &amp; "/nopayload" with administrator privileges		-- Move the postinstall script into the correct build directory		do shell script "mv /tmp/postinstall /tmp/" &amp; quoted form of pkgname &amp; "/scripts" with administrator privileges		-- Build the payload-free package		do shell script "pkgbuild --identifier " &amp; quoted form of pkgid &amp; " --version " &amp; quoted form of pkgvers &amp; " --root /tmp/" &amp; quoted form of pkgname &amp; "/nopayload --scripts /tmp/" &amp; quoted form of pkgname &amp; "/scripts /tmp/" &amp; quoted form of pkgname &amp; "/" &amp; quoted form of pkgname &amp; ".pkg" with administrator privileges		-- Display dialog that the payload-free package has been created		display alert ((pkgname) as string) &amp; ".pkg has been created."		-- Open a new Finder window that shows the new package		do shell script "open /tmp/" &amp; quoted form of pkgname &amp; ""		return inputend run</string>
+					<string>on run {input, parameters}		-- this repeat loop prevents empty strings from being submitted for the package name value	set q to 0	repeat while q is 0		set result to text returned of (display dialog "Enter a Name For Your Payload-Free Installer Package:" default answer "Payload-Free Installer Package")		if result is not "" then			set pkgname to result			set q to 1		end if	end repeat	-- this repeat loop prevents empty strings from being submitted for the package identifier value	set q to 0	repeat while q is 0		set result to text returned of (display dialog "Enter a Package Identifier:" default answer "com.github.payload_free")		if result is not "" then			set pkgid to result			set q to 1		end if	end repeat		-- this repeat loop prevents empty strings from being submitted for the version identifier value	set q to 0	repeat while q is 0		set result to text returned of (display dialog "Enter a Version Identifier:" default answer "1.0")		if result is not "" then			set pkgvers to result			set q to 1		end if	end repeat		-- Set the postinstall script to be executable		do shell script "chmod a+x /tmp/postinstall" with administrator privileges		-- Remove any existing build directories that have the same name as the new payload-free package		do shell script "rm -rf /tmp/" &amp; quoted form of pkgname &amp; "/" with administrator privileges		-- Create the build directories for the payload-free package		do shell script "mkdir /tmp/" &amp; quoted form of pkgname &amp; "" with administrator privileges	do shell script "mkdir /tmp/" &amp; quoted form of pkgname &amp; "/scripts" with administrator privileges	do shell script "mkdir /tmp/" &amp; quoted form of pkgname &amp; "/nopayload" with administrator privileges		-- Move the postinstall script into the correct build directory		do shell script "mv /tmp/postinstall /tmp/" &amp; quoted form of pkgname &amp; "/scripts" with administrator privileges		-- Build the payload-free package as a component package		do shell script "mkdir /tmp/" &amp; quoted form of pkgname &amp; "/pkg_building" with administrator privileges	do shell script "pkgbuild --identifier " &amp; quoted form of pkgid &amp; " --version " &amp; quoted form of pkgvers &amp; " --root /tmp/" &amp; quoted form of pkgname &amp; "/nopayload --scripts /tmp/" &amp; quoted form of pkgname &amp; "/scripts /tmp/" &amp; quoted form of pkgname &amp; "/pkg_building/" &amp; quoted form of pkgname &amp; ".pkg" with administrator privileges		-- Synthesize a distribution XML file using productbuild for the first boot component package		do shell script "productbuild --synthesize --package /tmp/" &amp; quoted form of pkgname &amp; "/pkg_building/" &amp; quoted form of pkgname &amp; ".pkg /tmp/" &amp; quoted form of pkgname &amp; "/pkg_building/distribution.xml" with administrator privileges		-- Add title field to distribution.xml file		set distroPath to "/tmp/" &amp; pkgname &amp; "/pkg_building/distribution.xml"		do shell script "sed -i '' $'/&lt;installer-gui-script.*&gt;/a\\\\\\n &lt;title&gt;" &amp; pkgname &amp; "&lt;/title&gt;\\\\\\n' " &amp; quoted form of distroPath with administrator privileges		-- Convert component package to a distribution package using the distribution XML file.		do shell script "productbuild --distribution /tmp/" &amp; quoted form of pkgname &amp; "/pkg_building/distribution.xml --package-path /tmp/" &amp; quoted form of pkgname &amp; "/pkg_building /tmp/" &amp; quoted form of pkgname &amp; "/" &amp; quoted form of pkgname &amp; ".pkg" with administrator privileges		-- Display dialog that the payload-free package has been created		display alert ((pkgname) as string) &amp; ".pkg has been created."		-- Open a new Finder window that shows the new package		do shell script "open /tmp/" &amp; quoted form of pkgname &amp; ""		return inputend run</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -1067,7 +1067,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>561.000000:1145.000000</string>
+				<string>1521.500000:1145.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -1077,40 +1077,40 @@ end run</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>2DA28372-B1A5-44CC-97F8-862B8E11CCED</key>
+		<key>4E501169-7189-474F-834E-F90422230B7E</key>
 		<dict>
 			<key>from</key>
-			<string>BE30C015-52AF-45A1-9B17-BE44451A189E - BE30C015-52AF-45A1-9B17-BE44451A189E</string>
+			<string>E947A45D-3891-4BF0-AE8A-8A323EAA89ED - E947A45D-3891-4BF0-AE8A-8A323EAA89ED</string>
 			<key>to</key>
-			<string>39307CB1-194C-4568-AA64-CF3F89AD886D - 39307CB1-194C-4568-AA64-CF3F89AD886D</string>
+			<string>C104F5DA-732F-4D58-94B4-6957D0165299 - C104F5DA-732F-4D58-94B4-6957D0165299</string>
 		</dict>
-		<key>4F72FC2E-D402-4AFB-B64E-667C3921B05F</key>
+		<key>8F2BBEDD-D38F-4917-926C-150BCF70D188</key>
 		<dict>
 			<key>from</key>
 			<string>715584CE-E634-4C48-98DB-6E830B526A12 - 715584CE-E634-4C48-98DB-6E830B526A12</string>
 			<key>to</key>
 			<string>E947A45D-3891-4BF0-AE8A-8A323EAA89ED - E947A45D-3891-4BF0-AE8A-8A323EAA89ED</string>
 		</dict>
-		<key>67A392F8-5FE9-497A-B19D-AF70DC4A4C62</key>
+		<key>D9EEDD2B-8E33-44D3-ACE1-45E9ACE891D5</key>
 		<dict>
 			<key>from</key>
 			<string>C104F5DA-732F-4D58-94B4-6957D0165299 - C104F5DA-732F-4D58-94B4-6957D0165299</string>
 			<key>to</key>
 			<string>71B51407-6411-405C-8FC2-40EFB023A0CE - 71B51407-6411-405C-8FC2-40EFB023A0CE</string>
 		</dict>
-		<key>AC5ED9B9-1EDC-4081-B77D-512158C9DB98</key>
-		<dict>
-			<key>from</key>
-			<string>E947A45D-3891-4BF0-AE8A-8A323EAA89ED - E947A45D-3891-4BF0-AE8A-8A323EAA89ED</string>
-			<key>to</key>
-			<string>C104F5DA-732F-4D58-94B4-6957D0165299 - C104F5DA-732F-4D58-94B4-6957D0165299</string>
-		</dict>
-		<key>F0D22289-F3E3-4F13-930A-DC86C7463FEB</key>
+		<key>DFCD25D5-F747-4C6A-8D89-760DBD5901D5</key>
 		<dict>
 			<key>from</key>
 			<string>39307CB1-194C-4568-AA64-CF3F89AD886D - 39307CB1-194C-4568-AA64-CF3F89AD886D</string>
 			<key>to</key>
 			<string>715584CE-E634-4C48-98DB-6E830B526A12 - 715584CE-E634-4C48-98DB-6E830B526A12</string>
+		</dict>
+		<key>F8EE09A8-B105-46B1-BF3E-E9DE37830F54</key>
+		<dict>
+			<key>from</key>
+			<string>BE30C015-52AF-45A1-9B17-BE44451A189E - BE30C015-52AF-45A1-9B17-BE44451A189E</string>
+			<key>to</key>
+			<string>39307CB1-194C-4568-AA64-CF3F89AD886D - 39307CB1-194C-4568-AA64-CF3F89AD886D</string>
 		</dict>
 	</dict>
 	<key>variables</key>
