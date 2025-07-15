@@ -50,9 +50,11 @@ The current release of **Payload-Free Package Creator.app** has been tested and 
 
 6. The payload-free package is built by pkgbuild using the postinstall script stored in **/tmp/package_name_here/scripts**
 
-7. The finished payload-free package is stored in **/tmp/package_name_here** and the user is prompted that the process is finished.
+7. The payload-free package is then converted to a distribution package using productbuild.
 
-8. Once the user is notified and clicks OK, a new Finder window opens for **/tmp/package_name_here**
+8. The finished payload-free package is stored in **/tmp/package_name_here** and the user is prompted that the process is finished.
+
+9. Once the user is notified and clicks OK, a new Finder window opens for **/tmp/package_name_here**
 
 
 Blog posts: [https://derflounder.wordpress.com/category/payload-free-package-creator/](https://derflounder.wordpress.com/category/payload-free-package-creator/)
